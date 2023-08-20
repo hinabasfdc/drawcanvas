@@ -131,11 +131,15 @@ const handleClickDownloadImage = () => {
 		return;
 	}
 
-	const result = confirm('画像を png ファイルとしてダウンロードします。よろしいですか？');
+	// ファイル名を取得
+	const fn = document.querySelector('.form-input-filename').value;	
+	const filename = (fn) ? fn : 'イメージ';
+
+	const result = confirm(`画像を ${filename}.png としてダウンロードします。よろしいですか？`);
 	if (result) {
 		let link = document.createElement('a');
 		link.href = canvas.toDataURL();
-		link.download = 'イメージ.png';
+		link.download = `${filename}.png`;
 		link.click();
 	}
 }

@@ -56,9 +56,15 @@
 
 		<!-- command -->
 		<div class="container">
-			<div class="m-2 p-2 border rounded-3 text-center">
-				<button type="button" class="btn btn-secondary" onclick="handleClickDownloadImage()"><i
+			<div class="row m-2 p-2 border rounded-3 text-center">
+				<label for="formFileName" class="col-sm-2 col-form-label">ファイルの名前</label>
+				<div class="col">
+					<input type="text" id="formFileName" value="イメージ" class="form-control form-input-filename">
+				</div>
+				<div class="col">
+					<button type="button" class="btn btn-secondary" onclick="handleClickDownloadImage()"><i
 						class="bi bi-cloud-download"></i>&nbsp;パソコンにダウンロード</button>
+				</div>
 			</div>
 		</div>
 
